@@ -1,19 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">    <title>Top Nav Example</title>
-</head>
-<body>
-    <div class="topNav">
-            <ul class="group-list">
-                <li><a href="#">File</a></li>
-                <li><a href="#">Modify</a></li>
-                <li><a href="#">Setting</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-    </div>
-    <script src="script.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">    
+        <title>Top Nav Example</title>
+    </head>
+    <body>
+        <div class="topNav">
+            <div class="drop-down-menu">
+                <button onmouseover="displayMenu('file')" onmouseleave="hideMenu('file')">File</button>
+                <div onmouseover="displayMenu('file')" onmouseleave="hideMenu('file')" class="drop-down-content" id="file">
+                    <a href="http://" target="_blank" rel="noopener noreferrer">content</a>
+                    <a href="http://" target="_blank" rel="noopener noreferrer">content</a>
+                    <a href="http://" target="_blank" rel="noopener noreferrer">content</a>
+                </div>
+            </div>
+            <div class="drop-down-menu">
+                <button onmouseover="displayMenu('modify')" onmouseleave="hideMenu('modify')">Modify</button>
+                <div onmouseover="displayMenu('modify')" onmouseleave="hideMenu('modify')"  class="drop-down-content" id="modify">
+                    <a href="http://" target="_blank" rel="noopener noreferrer" >content</a>
+                    <a href="http://" target="_blank" rel="noopener noreferrer">content</a>
+                    <a href="http://" target="_blank" rel="noopener noreferrer">content</a>
+                </div>
+            </div>
+            <div class="drop-down-menu" >
+                <button onmouseover="displayMenu('about')" onmouseleave="hideMenu('about')">About</button>
+                <div onmouseover="displayMenu('about')" onmouseleave="hideMenu('about')" class="drop-down-content" id="about">
+                    <a href="http://" target="_blank" rel="noopener noreferrer">content</a>
+                    <a href="http://" target="_blank" rel="noopener noreferrer">content</a>
+                    <a href="http://" target="_blank" rel="noopener noreferrer">content</a>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>
